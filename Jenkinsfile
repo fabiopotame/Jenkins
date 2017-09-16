@@ -12,7 +12,6 @@ node('php'){
         sh 'composer install --prefer-dist --no-dev --ignore-platform-reqs'
     }
     
-    // executando dois processos de forma paralela
     stage('config') {
         parallel(
             'config cache': {
