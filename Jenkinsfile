@@ -14,11 +14,20 @@ node('php'){
     
     stage('config') {
         parallel(
-            'config cache': {
-                sh 'php artisan config:cache'
+            'config echo1': {
+                echo '1'
             },
-            'config route': {
-                sh 'php artisan'
+            'config echo2': {
+                echo '2'
+            },
+            'config echo3': {
+                echo '3'
+            },
+            'config echo4': {
+                echo '4'
+            },
+            'config echo5': {
+                echo '5'
             }
         )
     }
